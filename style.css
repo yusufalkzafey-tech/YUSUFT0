@@ -1,0 +1,128 @@
+/* ===== style.css كامل ===== */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d0ebff; /* بيبي بلو */
+  margin: 0;
+  padding: 0;
+}
+
+#appDiv {
+  padding: 20px;
+}
+
+.student {
+  background-color: #e0f7ff;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.student-name {
+  font-weight: bold;
+  color: #555;
+  font-size: 16px;
+}
+
+.student-whatsapp {
+  color: #ff66aa;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.old-sessions, .new-sessions-group {
+  display: flex;
+  flex-direction: row; /* أفقي */
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+.session {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  user-select: none;
+}
+
+.session.present { background-color: #28a745; }  /* أخضر */
+.session.absent  { background-color: #dc3545; }  /* أحمر */
+
+.session-grade {
+  width: 40px;
+  border-radius: 5px;
+  padding: 2px 5px;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid #aaa;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #3399ff;
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+button:hover { background-color: #007acc; }
+
+input[type="text"], input[type="email"], input[type="password"] {
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+}
+
+#searchStudent {
+  width: 200px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+#classSelect {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+}
+
+button.toggleOldBtn {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+.sessions-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+#studentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-sessions-container {
+  display: flex;
+  flex-direction: column; /* كل مجموعة تحت الأخرى */
+  gap: 5px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>دفتر حضور الطلاب</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+
+<div class="app-bg">
+
+<h1>دفتر حضور الطلاب</h1>
+
+<div id="loginDiv">
+  <h3>تسجيل الدخول</h3>
+  <input type="email" id="email" placeholder="البريد الإلكتروني"><br>
+  <input type="password" id="password" placeholder="كلمة المرور"><br>
+  <button onclick="login()">تسجيل الدخول</button>
+  <button onclick="register()">تسجيل جديد</button>
+</div>
+
+<div id="appDiv" class="hidden">
+
+  <div id="topControls">
+    <input type="text" id="newClassName" placeholder="اسم الصف">
+    <button onclick="addClass()">إضافة صف</button>
+    <select id="classSelect" onchange="showSelectedClass()">
+      <option value="">اختر الصف</option>
+    </select>
+    <button onclick="logout()">تسجيل خروج</button>
+    <input type="text" id="searchStudent" class="searchBox" placeholder="بحث عن طالب..." oninput="searchStudents()">
+  </div>
+
+  <div id="studentsContainer"></div>
+
+</div>
+
+</div>
+</body>
+</html>
